@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(75, 75, 75);
+    color: white;
+}
+
+.container {
+    display: grid;
+    background-color: rgb(90, 117, 117);
+    gap: 12px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 150px);
+}
+
+.container div {
+    background-color: rgb(62, 50, 33);
+    border-radius: 15px;
+}
+
+
+.container div:nth-child(1), div:nth-child(6) {
+    grid-row: span 2;
+}
+
+.container div:nth-child(7), div:nth-child(8), div:nth-child(10), div:nth-child(11){
+    grid-column: span 2;
+}
+
+.container div:nth-child(13), div:nth-child(14) {
+    grid-column: span 2;
+}
+.container div:nth-child(12) {
+    grid-row: span 2;
+}
+
+    
