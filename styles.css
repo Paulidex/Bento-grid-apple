@@ -1,35 +1,42 @@
+* {
+    padding: 0;
+}
+
 body {
     background-color: rgb(75, 75, 75);
     color: white;
 }
 
 .container {
+    height: 98vh;
     display: grid;
-    background-color: rgb(90, 117, 117);
-    gap: 12px;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 150px);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 12px;
+
 }
 
 .container div {
     background-color: rgb(62, 50, 33);
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-.container div:nth-child(1), div:nth-child(6) {
+.container div:nth-child(1), div:nth-child(6){
     grid-row: span 2;
 }
 
-.container div:nth-child(7), div:nth-child(8), div:nth-child(10), div:nth-child(11){
+.container div:nth-child(7){
+    grid-row: span 2;
+    grid-column: span 4;
+}
+.container div:nth-child(10), div:nth-child(11){
     grid-column: span 2;
 }
 
-.container div:nth-child(13), div:nth-child(14) {
-    grid-column: span 2;
-}
-.container div:nth-child(12) {
+.container div:nth-child(9){
     grid-row: span 2;
 }
-
-    
